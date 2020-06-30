@@ -1,0 +1,34 @@
+{
+  "name": "docker-express-react-test",
+  "version": "1.0.0",
+  "description": "Docker Express-React Test",
+  "main": "index.js",
+  "scripts": {
+    "build:back": "webpack --mode production --target node --buildTarget back",
+    "build:front": "webpack --mode production --target web --buildTarget front",
+    "start:back": "nodemon ./src/back/index.js --inspect --exec babel-node",
+    "start:front": "webpack-dev-server --mode development --buildTarget front",
+    "start": "pm2 start test-app.config.js --env production",
+    "stop": "pm2 stop test-app.config.js",
+    "restart": "pm2 restart test-app.config.js"
+  },
+  "author": "aosamesan",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.4",
+    "@babel/node": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/preset-react": "^7.10.4",
+    "babel-loader": "^8.1.0",
+    "html-webpack-plugin": "^4.3.0",
+    "nodemon": "^2.0.4",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "watch": ["src/back/"],
+  "env": {
+    "MESSAGE": "THIS IS NODEMON MESSAGE",
+    "PORT": 3000
+  }
+}
